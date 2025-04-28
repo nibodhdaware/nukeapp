@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Usage: ./nukeapp.sh AppName
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 <AppName>"
+  exit 1
+fi
+
+APPNAME="$1"
+
+echo "🔥 Nuking $APPNAME from existence..."
+
+# Remove from Applications
+sudo rm -rf "/Applications/$APPNAME.app"
+
+# Remove from Library folders
+find ~/Library/Application\ Support -iname "*$APPNAME*" -exec rm -rf {} +
+find ~/Library/Preferences -iname "*$APPNAME*" -exec rm -rf {} +
+find ~/Library/Caches -iname "*$APPNAME*" -exec rm -rf {} +
+find ~/Library/Logs -iname "*$APPNAME*" -exec rm -rf {} +
+find ~/Library/Containers -iname "*$APPNAME*" -exec rm -rf {} +
+
+echo "✅ $APPNAME has been nuked."
