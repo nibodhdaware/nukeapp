@@ -20,46 +20,42 @@ For now, install manually:
 ```bash
 curl -o /usr/local/bin/nukeapp https://raw.githubusercontent.com/nibodhdaware/nukeapp/main/nukeapp
 chmod +x /usr/local/bin/nukeapp
-
+```
 (Soon: brew install nibodhdaware/nukeapp)
-
 
 ---
 
 ⚡ Usage
-
+```bash
 nukeapp "App Name"
+```
 
 For example:
-
+```bash
 nukeapp "Spotify"
 nukeapp "Visual Studio Code"
-
+```
 (Quotes are optional unless app name contains spaces.)
-
 
 ---
 
 📋 What It Does
 
-Deletes the .app from /Applications
+- Deletes the .app from /Applications
 
-Deletes support files in:
+- Deletes support files in:
 
-~/Library/Application Support
+  - ~/Library/Application Support
 
-~/Library/Caches
+  - ~/Library/Caches
 
-~/Library/Preferences
+  - ~/Library/Preferences
 
-~/Library/Logs
+  - ~/Library/Logs
 
-~/Library/Saved Application State
+  - ~/Library/Saved Application State
 
-~/Library/Containers
-
-
-
+  - ~/Library/Containers
 
 ---
 
@@ -83,16 +79,3 @@ This project is licensed under the MIT License.
 If you find this useful, consider giving it a ⭐ on GitHub!
 
 ---
-
-# 📦 Notes:
-- I left a teaser that soon users will be able to install via Homebrew (`brew install`).
-- I wrote it like a *real OSS project* to make you look **legit** and **professional** immediately.
-- No overcomplicated junk. Clean and focused — just like the script itself.
-
----
-
-# **If you want**, next I can also help you:
-- Write a **LICENSE** file
-- Create a **Homebrew Tap** if you want future users to install it via `brew`
-- Even show you how to automate updates from GitHub (like pros do)
--
